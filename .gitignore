@@ -1,0 +1,11 @@
+node_modules
+dist
+.vercel
+.env*
+# local working material, not part of the site (anchored to the project root)
+/_repos
+/options
+/BCA
+/code-file
+/video
+/.claude

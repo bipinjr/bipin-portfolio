@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 853" preserveAspectRatio="xMidYMid slice">
+<defs>
+<linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="hsl(170 40% 9%)"/><stop offset="1" stop-color="hsl(170 30% 3%)"/></linearGradient>
+<linearGradient id="b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="hsl(170 90% 70%)"/><stop offset="1" stop-color="hsl(170 90% 55%)" stop-opacity="0"/></linearGradient>
+<radialGradient id="f"><stop offset="0" stop-color="hsl(170 90% 65%)" stop-opacity=".55"/><stop offset="1" stop-color="hsl(170 90% 50%)" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1280" height="853" fill="url(#g)"/><polygon points="243,-20 73,860 413,860" fill="url(#b)" opacity="0.28"/><polygon points="543,-20 323,860 763,860" fill="url(#b)" opacity="0.4"/><polygon points="843,-20 573,860 1113,860" fill="url(#b)" opacity="0.52"/><polygon points="1143,-20 973,860 1313,860" fill="url(#b)" opacity="0.28"/>
+<ellipse cx="640" cy="800" rx="620" ry="120" fill="url(#f)"/>
+<rect y="760" width="1280" height="93" fill="hsl(170 30% 4%)" opacity=".7"/>
+<text x="40" y="60" font-family="system-ui,sans-serif" font-size="26" fill="#fff" opacity=".5">Your photo here</text>
+</svg>

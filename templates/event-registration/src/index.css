@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: hsl(240 60% 3.5%);
+  --color-card: hsl(240 40% 7%);
+  --color-raise: hsl(240 30% 12%);
+  --color-ink: hsl(248 100% 97%);
+  --color-mute: hsl(248 40% 78%);
+  --color-violet: hsl(263 70% 58%);
+  --color-bright: hsl(271 91% 65%);
+  --color-ok: hsl(160 84% 39%);
+  --color-warn: hsl(38 92% 50%);
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--color-bg); color: var(--color-ink); font-family: var(--font-sans); line-height: 1.6; }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.1; }
+:focus-visible { outline: 2px solid var(--color-bright); outline-offset: 3px; border-radius: 6px; }
+
+.grad-text { background: linear-gradient(135deg, hsl(263 90% 72%), hsl(291 91% 72%), hsl(200 95% 70%)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.card { background: color-mix(in srgb, var(--color-card) 82%, transparent); border: 1px solid hsl(263 70% 58% / .22); border-radius: 1rem; backdrop-filter: blur(10px); box-shadow: 0 4px 24px rgb(0 0 0 / .4); }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 48px; padding: 0 1.6rem; border-radius: .8rem; font-weight: 600; transition: transform .15s ease, box-shadow .2s ease, background-color .2s ease; }
+.btn:active { transform: scale(.97); }
+.btn-main { background: linear-gradient(135deg, var(--color-violet), var(--color-bright)); color: #fff; box-shadow: 0 0 22px hsl(263 70% 58% / .45); }
+.btn-main:hover { box-shadow: 0 0 34px hsl(271 91% 65% / .7); }
+.btn-line { border: 1px solid var(--color-violet); color: hsl(263 90% 80%); }
+.btn-line:hover { background: hsl(263 70% 58% / .12); }
+.field { width: 100%; min-height: 46px; padding: .6rem .85rem; border-radius: .7rem; background: var(--color-raise); border: 1px solid hsl(263 70% 58% / .25); color: var(--color-ink); font-size: 1rem; }
+.field:focus { outline: none; border-color: var(--color-bright); box-shadow: 0 0 0 3px hsl(271 91% 65% / .25); }
+
+@keyframes rise { from { opacity: 0; transform: translateY(16px); } }
+.rise { animation: rise .6s ease-out both; }
+@keyframes pulse-dot { 50% { opacity: .35; } }
+.live-dot { animation: pulse-dot 1.4s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .rise, .live-dot { animation: none; } html { scroll-behavior: auto; } .btn { transition: none; } }

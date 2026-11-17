@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #f6f7fb;
+  --color-card: #ffffff;
+  --color-ink: #12141c;
+  --color-soft: #5b6072;
+  --color-rule: #e2e5ee;
+  --color-brand: #4f46e5;
+  --color-brand-soft: #eef0ff;
+  --color-ok: #0f8a5f;
+  --color-ok-soft: #e3f6ee;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+body { background: var(--color-bg); color: var(--color-ink); font-family: var(--font-sans); line-height: 1.55; }
+:focus-visible { outline: 2px solid var(--color-brand); outline-offset: 3px; border-radius: 6px; }
+
+@keyframes rise { from { opacity: 0; transform: translateY(10px); } }
+.rise { animation: rise .4s ease-out both; }
+@keyframes grow { from { width: 0; } }
+.grow { animation: grow .8s ease-out both; }
+@media (prefers-reduced-motion: reduce) { .rise, .grow { animation: none; } }
